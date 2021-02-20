@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, .9),
+            rgba(0, 0, 0, .2));
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banner {
+    background: linear-gradient(to right bottom,
+            rgba(15, 17, 35),
+            rgba(15, 17, 35));
+    padding: 20px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner .title {
+    color: #fff;
+    font-size: 30px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.banner .fa-arrow-down {
+    color: #fff;
+    margin-top: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, .05);
+}
+
+.section {
+    padding: 20px;
+}
+
+.section-description {
+    color: rgba(0, 0, 0, .87);
+    text-align: justify;
+    margin: 0;
+}
+
+/**BTN IR ARRIBA**/
+.button-arriba {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all .5s ease;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-arriba .item {
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    background-color: #283593;
+    color: #fff !important;
+    opacity: 0;
+    transform: scale(0);
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: all .5s ease;
+}
+
+.shows {
+    animation: popup .5s ease-in-out !important;
+    transform: scale(1) !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    transition: all .5s ease;
+}
+
+@keyframes popup {
+    0% {
+        width: 0% !important;
+        height: 0% !important;
+        opacity: 0 !important;
+    }
+
+    50% {
+        width: 50% !important;
+        height: 50% !important;
+        opacity: 0.5 !important;
+    }
+
+    100% {
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 1 !important;
+    }
+}
